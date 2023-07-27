@@ -1,0 +1,18 @@
+.list {
+  list-style: none;
+  height: 64px;
+  width: 540px;
+}
+
+.empty {
+  color: #494c6b;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  height: inherit;
+  width: inherit;
+  border-bottom: 1px solid #e3e4f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,34 @@
+form {
+  margin-top: 2.5rem;
+  width: 540px;
+  height: 64px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  height: inherit;
+  width: 100%;
+  border: none;
+  border-radius: inherit;
+
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  color: #393a4b;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.input-field::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  color: #9495a5;
+}

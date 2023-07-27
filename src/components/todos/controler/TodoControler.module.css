@@ -1,0 +1,49 @@
+.wrapper {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 540px;
+  height: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.wrapper button {
+  border: none;
+  background-color: transparent;
+}
+
+.length,
+.clear-button {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: -0.19px;
+  color: #9495a5;
+}
+
+.clear-button {
+  cursor: pointer;
+}
+
+.main-controler button {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #9495a5;
+  letter-spacing: -0.19px;
+  cursor: pointer;
+  margin-left: 19px;
+}
+
+.main-controler button:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.active {
+  color: #3a7cfd !important;
+}

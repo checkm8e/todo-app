@@ -1,0 +1,8 @@
+.container {
+  margin-top: 1.5rem;
+  width: 540px;
+  min-height: 4rem;
+
+  border-radius: 5px;
+  background-color: #fff;
+}

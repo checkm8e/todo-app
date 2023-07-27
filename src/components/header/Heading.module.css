@@ -1,0 +1,24 @@
+.heading-container {
+  width: 541px;
+  height: 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.9rem;
+  color: #fff;
+}
+
+.btn {
+  border: none;
+  background-image: url("../../resources/images/icon-moon.svg");
+  background-color: transparent;
+  height: 26px;
+  width: 26px;
+}
