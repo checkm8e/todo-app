@@ -1,18 +1,37 @@
 .list {
   list-style: none;
-  height: 64px;
-  width: 540px;
 }
 
-.empty {
+li {
   color: #494c6b;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
-  height: inherit;
-  width: inherit;
+  height: 4rem;
+  width: 33.75rem;
   border-bottom: 1px solid #e3e4f1;
+}
+
+.empty {
+  line-height: 64px;
+  text-align: center;
+}
+
+.todo-list {
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+
+.todo {
+  width: 80%;
+  overflow: scroll;
+}
+
+.cross {
+  cursor: pointer;
+}
+
+.cross-button {
+  border: none;
+  background-color: transparent;
 }

@@ -1,11 +1,12 @@
-import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { useState, useContext } from "react";
+import { TodoContext } from "../../context/Todo-context";
 
 import Button from "../UI/Button";
 
 import styles from "./Form.module.css";
 
 const Form = () => {
+  const { setTodoList } = useContext(TodoContext);
   const [inputValue, setInputValue] = useState("");
 
   const handleInputValueChange = (event) => {
@@ -14,11 +15,12 @@ const Form = () => {
 
   const pushData = (data) => {
     const value = {
+      id: Date.now(),
       task: data,
       completed: false,
     };
 
-    localStorage.setItem(uuidv4(), JSON.stringify(value));
+    setTodoList((prevTodo) => [value, ...prevTodo]);
   };
 
   const handleFormSubmit = (event) => {
