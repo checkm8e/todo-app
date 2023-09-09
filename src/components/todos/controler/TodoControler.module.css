@@ -29,6 +29,11 @@
   cursor: pointer;
 }
 
+.clear-button:hover {
+  transition: 500ms color;
+  color: #601003;
+}
+
 .main-controler button {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
@@ -40,6 +45,7 @@
 }
 
 .main-controler button:hover {
+  transition: 500ms color;
   color: black;
   cursor: pointer;
 }

@@ -4,7 +4,8 @@ export const TodoContext = createContext();
 
 export const TodoProvider = (props) => {
   const [todoList, setTodoList] = useState([]);
-  const listSize = todoList.length;
+  const [filter, setFilter] = useState("all");
+  const listSize = todoList.filter((item) => !item.completed).length;
 
   const deleteTodoItem = (id) => {
     const element = todoList.filter((item) => item.id !== id);
@@ -12,12 +13,42 @@ export const TodoProvider = (props) => {
     setTodoList(element);
   };
 
-  console.log(todoList);
+  const deleteCompleted = () => {
+    const element = todoList.filter((item) => !item.completed);
+
+    setTodoList(element);
+  };
+
+  const markAsComplete = (id) => {
+    const updatedTodo = todoList.map((item) =>
+      item.id === id ? { ...item, completed: !item.completed } : item
+    );
+
+    setTodoList(updatedTodo);
+  };
+
+  let filteredList = [];
+
+  switch (filter) {
+    case "active":
+      filteredList = todoList.filter((item) => !item.completed);
+      break;
+    case "completed":
+      filteredList = todoList.filter((item) => item.completed);
+      break;
+    default:
+      filteredList = todoList;
+  }
+
+  console.log(todoList, filteredList);
 
   const data = {
-    todoList,
+    filteredList,
     setTodoList,
+    setFilter,
     deleteTodoItem,
+    deleteCompleted,
+    markAsComplete,
     listSize,
   };
   return (

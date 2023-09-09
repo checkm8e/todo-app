@@ -5,7 +5,7 @@ const Button = (props) => {
     <div className={style.container}>
       <input
         type="button"
-        className={style.button}
+        className={`${style.button} ${props.newStyle}`}
         onClick={props.buttonClick}
       />
     </div>
