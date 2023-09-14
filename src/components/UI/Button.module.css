@@ -6,14 +6,27 @@
 .button {
   height: 1.5rem;
   width: 1.5rem;
-  border: 1px solid #e3e4f1;
+
   border-radius: 50%;
   margin: 20px 24px;
   background-color: inherit;
   cursor: pointer;
 }
 
-.button:hover {
+.button-light {
+  border: 1px solid #e3e4f1;
+}
+
+.button-dark {
+  border: 1px solid #393a4b;
+}
+
+.button-light:hover {
   border-color: black;
+  transition: border-color 800ms;
+}
+
+.button-dark:hover {
+  border-color: #fff;
   transition: border-color 800ms;
 }

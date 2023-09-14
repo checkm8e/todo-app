@@ -2,10 +2,18 @@ form {
   margin-top: 2.5rem;
   width: 540px;
   height: 64px;
-  background-color: #fff;
+
   border-radius: 5px;
   display: flex;
   align-items: center;
+}
+
+.form-light {
+  background-color: #fff;
+}
+
+.form-dark {
+  background-color: #25273d;
 }
 
 .input-field {
@@ -18,7 +26,17 @@ form {
   font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: -0.25px;
+  caret-color: #3a7cfd;
+}
+
+.input-field-light {
+  background-color: #fff;
   color: #393a4b;
+}
+
+.input-field-dark {
+  background-color: #25273d;
+  color: #c8cbe7;
 }
 
 .input-field:focus {

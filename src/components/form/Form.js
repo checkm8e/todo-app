@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { TodoContext } from "../../context/Todo-context";
+import { DarkModeContext } from "../../context/Dark-context";
 
 import Button from "../UI/Button";
 
@@ -9,6 +10,10 @@ const Form = () => {
   const { setTodoList } = useContext(TodoContext);
   const [inputValue, setInputValue] = useState("");
 
+  // DarkMode code
+  const { darkMode } = useContext(DarkModeContext);
+
+  // Todo-related code
   const handleInputValueChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -48,11 +53,13 @@ const Form = () => {
   };
 
   return (
-    <form>
+    <form className={!darkMode ? styles["form-light"] : styles["form-dark"]}>
       <Button buttonClick={handleFormSubmit} />
       <input
         type="text"
-        className={styles["input-field"]}
+        className={`${styles["input-field"]} ${
+          !darkMode ? styles["input-field-light"] : styles["input-field-dark"]
+        }`}
         placeholder="Create a new todo..."
         value={inputValue}
         onChange={handleInputValueChange}
