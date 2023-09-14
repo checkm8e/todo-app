@@ -17,8 +17,18 @@ h1 {
 
 .btn {
   border: none;
-  background-image: url("../../resources/images/icon-moon.svg");
   background-color: transparent;
   height: 26px;
   width: 26px;
+  cursor: pointer;
+}
+
+.dark {
+  transition: background-image 1000ms;
+  background-image: url("../../resources/images/icon-sun.svg");
+}
+
+.light {
+  transition: background-image 1000ms;
+  background-image: url("../../resources/images/icon-moon.svg");
 }

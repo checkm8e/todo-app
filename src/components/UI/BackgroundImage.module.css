@@ -1,0 +1,29 @@
+.background {
+  height: 100vh;
+  overflow: auto;
+  transition: background-color 1000ms;
+}
+
+.light-background {
+  background-color: #fafafa;
+}
+
+.dark-background {
+  background-color: #393a4b;
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  transition: background-image 1000ms;
+}
+
+.light {
+  background-image: url("../../resources/images/bg-desktop-light.jpg");
+}
+
+.dark {
+  background-image: url("../../resources/images/bg-desktop-dark.jpg");
+}
