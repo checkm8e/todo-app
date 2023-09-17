@@ -11,13 +11,17 @@
   padding-right: 1.5rem;
 }
 
+.dark-mode {
+  background-color: #25273d;
+}
+
 .wrapper button {
   border: none;
   background-color: transparent;
 }
 
-.length,
-.clear-button {
+.length-light,
+.clear-button-light {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
@@ -25,13 +29,28 @@
   color: #9495a5;
 }
 
-.clear-button {
+.length-dark,
+.clear-button-dark {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: -0.19px;
+  color: #5b5e7e;
+}
+
+.clear-button-light,
+.clear-button-dark {
   cursor: pointer;
 }
 
-.clear-button:hover {
+.clear-button-light:hover {
   transition: 500ms color;
   color: #601003;
+}
+
+.clear-button-dark:hover {
+  transition: 500ms color;
+  color: #e3e4f1;
 }
 
 .main-controler button {
@@ -44,9 +63,23 @@
   margin-left: 19px;
 }
 
-.main-controler button:hover {
+.button-light {
+  cursor: pointer;
+}
+
+.button-dark {
+  cursor: pointer;
+}
+
+.main-controler .button-light:hover {
   transition: 500ms color;
   color: black;
+  cursor: pointer;
+}
+
+.main-controler .button-dark:hover {
+  transition: 500ms color;
+  color: #e3e4f1;
   cursor: pointer;
 }
 
