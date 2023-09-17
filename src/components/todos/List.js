@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { TodoContext } from "../../context/Todo-context";
+import { DarkModeContext } from "../../context/Dark-context";
 
 import Cross from "../../resources/images/icon-cross.svg";
 import Tick from "../../resources/images/icon-check.svg";
@@ -11,6 +12,8 @@ import styles from "./List.module.css";
 const List = (props) => {
   const { filteredList, deleteTodoItem, markAsComplete } =
     useContext(TodoContext);
+
+  const { darkMode } = useContext(DarkModeContext);
 
   const crossButtonClicked = (id) => {
     deleteTodoItem(id);
@@ -25,15 +28,22 @@ const List = (props) => {
   return (
     <ul className={styles.list}>
       {filteredList.length === 0 ? (
-        <li className={styles.empty}>List is empty.</li>
+        <li
+          className={`${styles.empty} ${
+            !darkMode ? styles["empty-light"] : styles["empty-dark"]
+          }`}
+        >
+          List is empty.
+        </li>
       ) : (
         filteredList.map((todo) => {
           return (
-            <li key={todo.id} className={styles["todo-list"]}>
-              {/* <Button
-                newStyle={`${todo.completed ? styles["button-style"] : ""}`}
-                buttonClick={() => checkButtonClicked(todo.id)}
-              /> */}
+            <li
+              key={todo.id}
+              className={`${styles["todo-list"]} ${
+                !darkMode ? styles["todo-light"] : styles["todo-dark"]
+              }`}
+            >
               <button
                 className={`${styles["tick-button"]} ${
                   todo.completed ? styles["tick-completed"] : ""
@@ -51,7 +61,7 @@ const List = (props) => {
               </p>
               <button
                 onClick={() => crossButtonClicked(todo.id)}
-                className={styles["cross-button"]}
+                className={`${styles["cross-button"]} `}
               >
                 <img src={Cross} alt="Delete" />
               </button>
