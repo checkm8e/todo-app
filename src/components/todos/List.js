@@ -45,16 +45,20 @@ const List = (props) => {
               }`}
             >
               <button
-                className={`${styles["tick-button"]} ${
-                  todo.completed ? styles["tick-completed"] : ""
-                }`}
+                className={`${
+                  !darkMode
+                    ? styles["tick-button-light"]
+                    : styles["tick-button-dark"]
+                } ${todo.completed ? styles["tick-completed"] : ""}`}
                 onClick={() => checkButtonClicked(todo.id)}
               >
-                <img src={Tick} alt="check" />
+                {todo.completed ? <img src={Tick} alt="check" /> : ""}
               </button>
               <p
                 className={`${styles.todo} ${
-                  todo.completed ? styles.completed : ""
+                  todo.completed && !darkMode ? styles["completed-light"] : ""
+                } ${
+                  todo.completed && darkMode ? styles["completed-dark"] : ""
                 }`}
               >
                 {todo.task}

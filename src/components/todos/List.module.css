@@ -55,8 +55,13 @@ li:first-child {
   overflow: scroll;
 }
 
-.completed {
+.completed-light {
   color: #d1d2da;
+  text-decoration: line-through;
+}
+
+.completed-dark {
+  color: #4d5067;
   text-decoration: line-through;
 }
 
@@ -87,7 +92,8 @@ li:first-child {
 button styles
 */
 
-.tick-button {
+.tick-button-light,
+.tick-button-dark {
   height: 1.5rem;
   width: 1.5rem;
   border: 1px solid #e3e4f1;
@@ -97,8 +103,17 @@ button styles
   background: none;
 }
 
-.tick-button:hover {
+.tick-button-dark {
+  border-color: #393a4b;
+}
+
+.tick-button-light:hover {
   border-color: black;
+  transition: border-color 800ms;
+}
+
+.tick-button-dark:hover {
+  border-color: white;
   transition: border-color 800ms;
 }
 
